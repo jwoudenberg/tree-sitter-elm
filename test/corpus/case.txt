@@ -1262,8 +1262,8 @@ func result =
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (double_dot)))

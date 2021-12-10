@@ -9,8 +9,8 @@ module Main exposing (..)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (double_dot))))
@@ -26,10 +26,10 @@ module Page.View exposing (..)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (exposing_list
       (exposing)
       (double_dot))))
@@ -45,8 +45,8 @@ module Main exposing (view)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_value
@@ -63,8 +63,8 @@ module Main exposing (main, update, view)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_value
@@ -85,8 +85,8 @@ module Main exposing (Msg(..), main, update, view)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -111,8 +111,8 @@ module Main exposing (Msg, main, update, view)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -135,8 +135,8 @@ module Main exposing (Msg(..), main, update, view)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -161,8 +161,8 @@ module Main exposing (Msg(One), main, update, view)
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -195,8 +195,8 @@ effect module Task where { command = MyCmd } exposing
   (module_declaration
     (effect)
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (where)
     (record_expr
       (field

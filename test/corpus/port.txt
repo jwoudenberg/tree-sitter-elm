@@ -15,8 +15,8 @@ port foo : String -> Cmd msg
   (module_declaration
     (port)
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_value

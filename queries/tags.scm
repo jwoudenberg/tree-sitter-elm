@@ -14,6 +14,6 @@
 (value_expr (upper_case_qid (upper_case_identifier) @name)) @reference.union
 
 
-(module_declaration 
-    (upper_case_qid (upper_case_identifier)) @name
+(module_declaration
+    (module_identifier (module_name_segment)) @name
 ) @definition.module
