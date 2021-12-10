@@ -282,12 +282,12 @@ src (Avatar maybeUrl)=
         (function_call_expr
           (value_expr
             (value_qid
-              (upper_case_identifier)
+              (module_name_segment)
               (dot)
               (lower_case_identifier)))
           (value_expr
             (value_qid
-              (upper_case_identifier)
+              (module_name_segment)
               (dot)
               (lower_case_identifier)))))
       (case_of_branch
@@ -302,12 +302,12 @@ src (Avatar maybeUrl)=
         (function_call_expr
           (value_expr
             (value_qid
-              (upper_case_identifier)
+              (module_name_segment)
               (dot)
               (lower_case_identifier)))
           (value_expr
             (value_qid
-              (upper_case_identifier)
+              (module_name_segment)
               (dot)
               (lower_case_identifier)))))
       (case_of_branch
@@ -321,9 +321,9 @@ src (Avatar maybeUrl)=
         (function_call_expr
           (value_expr
             (value_qid
-              (upper_case_identifier)
+              (module_name_segment)
               (dot)
-              (upper_case_identifier)
+              (module_name_segment)
               (dot)
               (lower_case_identifier)))
           (value_expr
@@ -487,7 +487,7 @@ toIntResult s =
       (function_call_expr
         (value_expr
           (value_qid
-            (upper_case_identifier)
+            (module_name_segment)
             (dot)
             (lower_case_identifier)))
         (value_expr
@@ -592,7 +592,7 @@ enum key dict =
             (function_call_expr
               (value_expr
                 (value_qid
-                  (upper_case_identifier)
+                  (module_name_segment)
                   (dot)
                   (lower_case_identifier)))
               (value_expr
@@ -1058,7 +1058,7 @@ all = describe "parsering"
                   (function_call_expr
                     (value_expr
                       (value_qid
-                        (upper_case_identifier)
+                        (module_name_segment)
                         (dot)
                         (lower_case_identifier)))
                     (value_expr
@@ -1086,7 +1086,7 @@ all = describe "parsering"
                       (function_call_expr
                         (value_expr
                           (value_qid
-                            (upper_case_identifier)
+                            (module_name_segment)
                             (dot)
                             (lower_case_identifier)))
                         (string_constant_expr
