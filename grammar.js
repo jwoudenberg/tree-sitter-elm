@@ -62,13 +62,13 @@ module.exports = grammar({
           seq(
             optional($.port),
             $.module,
-            field("name", $.upper_case_qid),
+            field("name", $.module_identifier),
             field("exposing", $.exposing_list)
           ),
           seq(
             $.effect,
             $.module,
-            field("name", $.upper_case_qid),
+            field("name", $.module_identifier),
             $.where,
             $.record_expr,
             field("exposing", $.exposing_list)
@@ -129,6 +129,22 @@ module.exports = grammar({
 
     _dot_without_leading_whitespace: ($) => token.immediate("."),
 
+    module_identifier: ($) =>
+      prec.right(
+        seq(
+          alias($.upper_case_identifier, $.module_name_segment),
+          repeat(
+            seq(
+              alias($._dot_without_leading_whitespace, $.dot),
+              alias(
+                $._upper_case_identifier_without_leading_whitespace,
+                $.module_name_segment
+              )
+            )
+          )
+        )
+      ),
+
     upper_case_qid: ($) =>
       prec.right(
         choice(
@@ -188,7 +204,7 @@ module.exports = grammar({
     import_clause: ($) =>
       seq(
         $.import,
-        field("moduleName", $.upper_case_qid),
+        field("moduleName", $.module_identifier),
         field("asClause", optional($.as_clause)),
         field("exposing", optional($.exposing_list))
       ),

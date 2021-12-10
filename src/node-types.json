@@ -1259,7 +1259,7 @@
         "required": true,
         "types": [
           {
-            "type": "upper_case_qid",
+            "type": "module_identifier",
             "named": true
           }
         ]
@@ -1599,7 +1599,7 @@
         "required": true,
         "types": [
           {
-            "type": "upper_case_qid",
+            "type": "module_identifier",
             "named": true
           }
         ]
@@ -1627,6 +1627,25 @@
         },
         {
           "type": "where",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dot",
+          "named": true
+        },
+        {
+          "type": "module_name_segment",
           "named": true
         }
       ]
