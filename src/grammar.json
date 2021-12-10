@@ -130,7 +130,7 @@
                 "name": "name",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "upper_case_qid"
+                  "name": "module_identifier"
                 }
               },
               {
@@ -159,7 +159,7 @@
                 "name": "name",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "upper_case_qid"
+                  "name": "module_identifier"
                 }
               },
               {
@@ -392,6 +392,50 @@
         "value": "."
       }
     },
+    "module_identifier": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "upper_case_identifier"
+            },
+            "named": true,
+            "value": "module_name_segment"
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_dot_without_leading_whitespace"
+                  },
+                  "named": true,
+                  "value": "dot"
+                },
+                {
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_upper_case_identifier_without_leading_whitespace"
+                  },
+                  "named": true,
+                  "value": "module_name_segment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
     "upper_case_qid": {
       "type": "PREC_RIGHT",
       "value": 0,
@@ -560,7 +604,7 @@
           "name": "moduleName",
           "content": {
             "type": "SYMBOL",
-            "name": "upper_case_qid"
+            "name": "module_identifier"
           }
         },
         {

@@ -11,22 +11,22 @@ import Html.Events.Test
 (file
   (import_clause
     (import)
-    (upper_case_qid
-      (upper_case_identifier)))
+    (module_identifier
+      (module_name_segment)))
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier)))
+      (module_name_segment)))
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
       (module_name_segment)
       (dot)
-      (upper_case_identifier))))
+      (module_name_segment))))
 
 ================================================================================
 Import statements with exposing
@@ -42,29 +42,29 @@ import Html exposing (Html, button, div, text)
 (file
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_value
         (lower_case_identifier))))
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (exposing_list
       (exposing)
       (double_dot)))
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_value
@@ -73,8 +73,8 @@ import Html exposing (Html, button, div, text)
         (lower_case_identifier))))
   (import_clause
     (import)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -109,8 +109,8 @@ import Html.Attributes as Attr
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -126,8 +126,8 @@ import Html.Attributes as Attr
   (block_comment)
   (import_clause
     (import)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -136,10 +136,10 @@ import Html.Attributes as Attr
         (upper_case_identifier))))
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (as_clause
       (as)
       (module_name_segment))))
@@ -157,10 +157,10 @@ import Remedy.ScreenList as ScreenList
 (file
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (as_clause
       (as)
       (module_name_segment))
@@ -170,10 +170,10 @@ import Remedy.ScreenList as ScreenList
         (upper_case_identifier))))
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (as_clause
       (as)
       (module_name_segment))
@@ -183,10 +183,10 @@ import Remedy.ScreenList as ScreenList
         (upper_case_identifier))))
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (as_clause
       (as)
       (module_name_segment))))
@@ -202,10 +202,10 @@ import Url.Parser as Parser exposing ((</>), Parser, oneOf, s, string)
 (file
   (import_clause
     (import)
-    (upper_case_qid
+    (module_identifier
       (module_name_segment)
       (dot)
-      (upper_case_identifier))
+      (module_name_segment))
     (as_clause
       (as)
       (module_name_segment))
@@ -233,8 +233,8 @@ import Element exposing (DeviceClass(..))
 (file
   (import_clause
     (import)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
@@ -253,8 +253,8 @@ import Element exposing (DeviceClass(Phone))
 (file
   (import_clause
     (import)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
