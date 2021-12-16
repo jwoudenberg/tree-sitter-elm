@@ -165,8 +165,8 @@ match input =
 (file
   (module_declaration
     (module)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_value
@@ -177,21 +177,21 @@ match input =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (arrow)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))
+        (type_qid
+          (type_identifier))
         (tuple_type
           (type_expression
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier))))
+              (type_qid
+                (type_identifier))))
           (type_expression
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier))))))))
+              (type_qid
+                (type_identifier))))))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier)
@@ -199,8 +199,8 @@ match input =
         (lower_case_identifier)))
     (eq)
     (value_expr
-      (upper_case_qid
-        (upper_case_identifier)))))
+      (constructor_qid
+        (constructor_identifier)))))
 
 ================================================================================
 Empty comment inside function
@@ -220,21 +220,21 @@ match input =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (arrow)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))
+        (type_qid
+          (type_identifier))
         (tuple_type
           (type_expression
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier))))
+              (type_qid
+                (type_identifier))))
           (type_expression
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier))))))))
+              (type_qid
+                (type_identifier))))))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier)
@@ -243,5 +243,5 @@ match input =
     (eq)
     (block_comment)
     (value_expr
-      (upper_case_qid
-        (upper_case_identifier)))))
+      (constructor_qid
+        (constructor_identifier)))))

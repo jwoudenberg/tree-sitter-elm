@@ -202,8 +202,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)
@@ -214,8 +214,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)
@@ -257,8 +257,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)
@@ -269,8 +269,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)
@@ -315,8 +315,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)
@@ -327,8 +327,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)
@@ -371,8 +371,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)
@@ -383,8 +383,8 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (anything_pattern
               (underscore))))
         (arrow)

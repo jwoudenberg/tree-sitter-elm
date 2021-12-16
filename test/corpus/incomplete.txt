@@ -23,8 +23,8 @@ view model =
       (list_expr)
       (list_expr
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier)))
+          (constructor_qid
+            (constructor_identifier)))
         (ERROR
           (dot))))))
 
@@ -102,17 +102,17 @@ defaultPage = Home
 (file
   (ERROR
     (import)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (as))
   (import_clause
     (import)
-    (upper_case_qid
-      (upper_case_identifier))
+    (module_identifier
+      (module_name_segment))
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier)
+        (type_identifier)
         (exposed_union_constructors
           (double_dot)))))
   (value_declaration
@@ -120,5 +120,5 @@ defaultPage = Home
       (lower_case_identifier))
     (eq)
     (value_expr
-      (upper_case_qid
-        (upper_case_identifier)))))
+      (constructor_qid
+        (constructor_identifier)))))

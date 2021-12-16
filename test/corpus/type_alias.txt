@@ -12,12 +12,12 @@ type alias Number =
   (type_alias_declaration
     (type)
     (alias)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))))))
+        (type_qid
+          (type_identifier))))))
 
 ================================================================================
 Type alias
@@ -36,7 +36,7 @@ type alias ListItem =
   (type_alias_declaration
     (type)
     (alias)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (type_expression
       (record_type
@@ -45,19 +45,19 @@ type alias ListItem =
           (colon)
           (type_expression
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier)))))
+              (type_qid
+                (type_identifier)))))
         (field_type
           (lower_case_identifier)
           (colon)
           (type_expression
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier)))))
+              (type_qid
+                (type_identifier)))))
         (field_type
           (lower_case_identifier)
           (colon)
           (type_expression
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier)))))))))
+              (type_qid
+                (type_identifier)))))))))
