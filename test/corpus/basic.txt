@@ -39,8 +39,8 @@ getFirstMatch state =
         (arrow)
         (function_call_expr
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier)))
+            (constructor_qid
+              (constructor_identifier)))
           (field_access_expr
             (value_expr
               (value_qid
@@ -57,8 +57,8 @@ getFirstMatch state =
         (arrow)
         (function_call_expr
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier)))
+            (constructor_qid
+              (constructor_identifier)))
           (field_access_expr
             (value_expr
               (value_qid
@@ -838,12 +838,12 @@ isUpper char =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (arrow)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))))
+        (type_qid
+          (type_identifier)))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier)

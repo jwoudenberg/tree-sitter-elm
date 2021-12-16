@@ -49,13 +49,13 @@
 
 (type) @keyword.type.elm
 
-(type_declaration(upper_case_identifier) @storage.type.elm)
+(type_declaration(type_identifier) @storage.type.elm)
 (type_ref) @storage.type.elm
-(type_alias_declaration name: (upper_case_identifier) @storage.type.elm)
+(type_alias_declaration name: (type_identifier) @storage.type.elm)
 
-(union_variant(upper_case_identifier) @union.elm)
+(union_variant(constructor_identifier) @union.elm)
 (union_pattern) @union.elm
-(value_expr(upper_case_qid(upper_case_identifier)) @union.elm)
+(value_expr(constructor_qid(constructor_identifier)) @union.elm)
 
 ; comments
 (line_comment) @comment.elm

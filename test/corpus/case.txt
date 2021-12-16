@@ -25,12 +25,12 @@ update msg =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier)))))))
+          (constructor_qid
+            (constructor_identifier)))))))
 
 ================================================================================
 Case with one branch and comment
@@ -61,8 +61,8 @@ update msg value =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (value_expr
           (value_qid
@@ -101,8 +101,8 @@ update msg model =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (bin_op_expr
           (value_expr
@@ -115,8 +115,8 @@ update msg model =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (bin_op_expr
           (value_expr
@@ -182,8 +182,8 @@ enum =
               (underscore)))
           (arrow)
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier))))))))
+            (constructor_qid
+              (constructor_identifier))))))))
 
 ================================================================================
 Case with three branches
@@ -210,12 +210,12 @@ src (Avatar maybeUrl)=
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (arrow)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))
+        (type_qid
+          (type_identifier))
         (type_variable
           (lower_case_identifier)))))
   (value_declaration
@@ -223,8 +223,8 @@ src (Avatar maybeUrl)=
       (lower_case_identifier)
       (pattern
         (union_pattern
-          (upper_case_qid
-            (upper_case_identifier))
+          (constructor_qid
+            (constructor_identifier))
           (lower_pattern
             (lower_case_identifier)))))
     (eq)
@@ -237,8 +237,8 @@ src (Avatar maybeUrl)=
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (function_call_expr
           (value_expr
@@ -254,8 +254,8 @@ src (Avatar maybeUrl)=
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (string_constant_expr
               (open_quote)
               (close_quote))))
@@ -274,8 +274,8 @@ src (Avatar maybeUrl)=
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (lower_pattern
               (lower_case_identifier))))
         (arrow)
@@ -343,17 +343,17 @@ map4 func ma mb mc md =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier))))
+          (constructor_qid
+            (constructor_identifier))))
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (lower_pattern
               (lower_case_identifier))))
         (arrow)
@@ -366,17 +366,17 @@ map4 func ma mb mc md =
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))))
+                (constructor_qid
+                  (constructor_identifier))))
             (arrow)
             (value_expr
-              (upper_case_qid
-                (upper_case_identifier))))
+              (constructor_qid
+                (constructor_identifier))))
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))
+                (constructor_qid
+                  (constructor_identifier))
                 (lower_pattern
                   (lower_case_identifier))))
             (arrow)
@@ -406,17 +406,17 @@ map4 func ma mb mc md =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier))))
+          (constructor_qid
+            (constructor_identifier))))
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (lower_pattern
               (lower_case_identifier))))
         (arrow)
@@ -458,28 +458,28 @@ toIntResult s =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (lower_pattern
               (lower_case_identifier))))
         (arrow)
         (function_call_expr
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier)))
+            (constructor_qid
+              (constructor_identifier)))
           (value_expr
             (value_qid
               (lower_case_identifier)))))
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (bin_op_expr
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier)))
+            (constructor_qid
+              (constructor_identifier)))
           (operator
             (operator_identifier))
           (string_constant_expr
@@ -568,8 +568,8 @@ enum key dict =
                 (underscore)))
             (arrow)
             (value_expr
-              (upper_case_qid
-                (upper_case_identifier)))))))))
+              (constructor_qid
+                (constructor_identifier)))))))))
 
 ================================================================================
 Nested case
@@ -606,8 +606,8 @@ func a b =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (case_of_expr
           (case)
@@ -687,8 +687,8 @@ func a b =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (case_of_expr
           (case)
@@ -824,8 +824,8 @@ makeEdit cursor desc =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (lower_pattern
               (lower_case_identifier))))
         (arrow)
@@ -862,8 +862,8 @@ makeEdit cursor desc =
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))))
+                (constructor_qid
+                  (constructor_identifier))))
             (arrow)
             (line_comment)
             (case_of_expr
@@ -890,8 +890,8 @@ makeEdit cursor desc =
               (case_of_branch
                 (pattern
                   (union_pattern
-                    (upper_case_qid
-                      (upper_case_identifier))
+                    (constructor_qid
+                      (constructor_identifier))
                     (lower_pattern
                       (lower_case_identifier))
                     (lower_pattern
@@ -901,8 +901,8 @@ makeEdit cursor desc =
                 (arrow)
                 (function_call_expr
                   (value_expr
-                    (upper_case_qid
-                      (upper_case_identifier)))
+                    (constructor_qid
+                      (constructor_identifier)))
                   (value_expr
                     (value_qid
                       (lower_case_identifier)))
@@ -912,8 +912,8 @@ makeEdit cursor desc =
                   (parenthesized_expr
                     (function_call_expr
                       (value_expr
-                        (upper_case_qid
-                          (upper_case_identifier)))
+                        (constructor_qid
+                          (constructor_identifier)))
                       (record_expr
                         (record_base_identifier
                           (lower_case_identifier))
@@ -933,24 +933,24 @@ makeEdit cursor desc =
               (case_of_branch
                 (pattern
                   (union_pattern
-                    (upper_case_qid
-                      (upper_case_identifier))))
+                    (constructor_qid
+                      (constructor_identifier))))
                 (arrow)
                 (value_expr
-                  (upper_case_qid
-                    (upper_case_identifier))))
+                  (constructor_qid
+                    (constructor_identifier))))
               (case_of_branch
                 (pattern
                   (union_pattern
-                    (upper_case_qid
-                      (upper_case_identifier))
+                    (constructor_qid
+                      (constructor_identifier))
                     (lower_pattern
                       (lower_case_identifier))))
                 (arrow)
                 (function_call_expr
                   (value_expr
-                    (upper_case_qid
-                      (upper_case_identifier)))
+                    (constructor_qid
+                      (constructor_identifier)))
                   (value_expr
                     (value_qid
                       (lower_case_identifier)))))))
@@ -1033,8 +1033,8 @@ all = describe "parsering"
                 (case_of_branch
                   (pattern
                     (union_pattern
-                      (upper_case_qid
-                        (upper_case_identifier))
+                      (constructor_qid
+                        (constructor_identifier))
                       (lower_pattern
                         (lower_case_identifier))))
                   (arrow)
@@ -1062,13 +1062,13 @@ all = describe "parsering"
                         (value_qid
                           (lower_case_identifier)))
                       (value_expr
-                        (upper_case_qid
-                          (upper_case_identifier))))))
+                        (constructor_qid
+                          (constructor_identifier))))))
                 (case_of_branch
                   (pattern
                     (union_pattern
-                      (upper_case_qid
-                        (upper_case_identifier))
+                      (constructor_qid
+                        (constructor_identifier))
                       (lower_pattern
                         (lower_case_identifier))))
                   (arrow)
@@ -1104,8 +1104,8 @@ flipBy how (Plane (width, height) _ as plane) =
         (lower_case_identifier))
       (pattern
         (union_pattern
-          (upper_case_qid
-            (upper_case_identifier))
+          (constructor_qid
+            (constructor_identifier))
           (tuple_pattern
             (pattern
               (lower_pattern
@@ -1138,8 +1138,8 @@ flipBy how (Plane (width, height) _ as plane) =
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))))
+                (constructor_qid
+                  (constructor_identifier))))
             (arrow)
             (anonymous_function_expr
               (backslash)
@@ -1172,8 +1172,8 @@ flipBy how (Plane (width, height) _ as plane) =
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))))
+                (constructor_qid
+                  (constructor_identifier))))
             (arrow)
             (anonymous_function_expr
               (backslash)
@@ -1230,16 +1230,16 @@ func result =
       (double_dot)))
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (lower_type_name
       (lower_case_identifier))
     (eq)
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_variable
         (lower_case_identifier)))
     (union_variant
-      (upper_case_identifier)))
+      (constructor_identifier)))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier)
@@ -1256,8 +1256,8 @@ func result =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (arrow)
         (string_constant_expr
           (open_quote)
@@ -1265,12 +1265,12 @@ func result =
       (case_of_branch
         (pattern
           (union_pattern
-            (upper_case_qid
-              (upper_case_identifier))
+            (constructor_qid
+              (constructor_identifier))
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))
+                (constructor_qid
+                  (constructor_identifier))
                 (lower_pattern
                   (lower_case_identifier))))))
         (arrow)

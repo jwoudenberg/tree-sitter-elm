@@ -23,8 +23,8 @@ view model =
       (list_expr)
       (list_expr
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier)))
+          (constructor_qid
+            (constructor_identifier)))
         (ERROR
           (dot))))))
 

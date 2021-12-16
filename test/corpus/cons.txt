@@ -50,8 +50,8 @@ test listList =
             (colon)
             (type_expression
               (type_ref
-                (upper_case_qid
-                  (upper_case_identifier)))))
+                (type_qid
+                  (type_identifier)))))
           (value_declaration
             (function_declaration_left
               (lower_case_identifier))
@@ -127,8 +127,8 @@ test listList =
             (colon)
             (type_expression
               (type_ref
-                (upper_case_qid
-                  (upper_case_identifier)))))
+                (type_qid
+                  (type_identifier)))))
           (value_declaration
             (function_declaration_left
               (lower_case_identifier))

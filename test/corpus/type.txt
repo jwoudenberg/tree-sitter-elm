@@ -19,28 +19,28 @@ type Msg
 (file
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (union_variant
-      (upper_case_identifier)))
+      (constructor_identifier)))
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (union_variant
-      (upper_case_identifier))
+      (constructor_identifier))
     (union_variant
-      (upper_case_identifier)))
+      (constructor_identifier)))
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (union_variant
-      (upper_case_identifier))
+      (constructor_identifier))
     (union_variant
-      (upper_case_identifier))
+      (constructor_identifier))
     (union_variant
-      (upper_case_identifier))))
+      (constructor_identifier))))
 
 ================================================================================
 Type statement with payload
@@ -74,70 +74,70 @@ type ElementProblem
 (file
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))))
+        (type_qid
+          (type_identifier))))
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))))
+        (type_qid
+          (type_identifier))))
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))))
+        (type_qid
+          (type_identifier)))))
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))))
+        (type_qid
+          (type_identifier))))
     (union_variant
-      (upper_case_identifier))
+      (constructor_identifier))
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_ref
-        (upper_case_qid
+        (type_qid
           (module_name_segment)
           (dot)
-          (upper_case_identifier)))))
+          (type_identifier)))))
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))))
+        (type_qid
+          (type_identifier))))
     (union_variant
-      (upper_case_identifier))
+      (constructor_identifier))
     (union_variant
-      (upper_case_identifier)))
+      (constructor_identifier)))
   (type_declaration
     (type)
-    (upper_case_identifier)
+    (type_identifier)
     (eq)
     (union_variant
-      (upper_case_identifier)
+      (constructor_identifier)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))))
+        (type_qid
+          (type_identifier))))
     (union_variant
-      (upper_case_identifier))
+      (constructor_identifier))
     (union_variant
-      (upper_case_identifier))))
+      (constructor_identifier))))

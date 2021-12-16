@@ -76,8 +76,8 @@ view model =
                 (value_qid
                   (lower_case_identifier)))
               (value_expr
-                (upper_case_qid
-                  (upper_case_identifier)))))
+                (constructor_qid
+                  (constructor_identifier)))))
           (list_expr
             (function_call_expr
               (value_expr
@@ -117,8 +117,8 @@ view model =
                 (value_qid
                   (lower_case_identifier)))
               (value_expr
-                (upper_case_qid
-                  (upper_case_identifier)))))
+                (constructor_qid
+                  (constructor_identifier)))))
           (list_expr
             (function_call_expr
               (value_expr

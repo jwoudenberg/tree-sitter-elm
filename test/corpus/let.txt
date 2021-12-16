@@ -185,12 +185,12 @@ routeToString page =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (arrow)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))))
+        (type_qid
+          (type_identifier)))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier)
@@ -211,15 +211,15 @@ routeToString page =
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))))
+                (constructor_qid
+                  (constructor_identifier))))
             (arrow)
             (list_expr))
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))))
+                (constructor_qid
+                  (constructor_identifier))))
             (arrow)
             (list_expr))))
       (bin_op_expr
@@ -329,27 +329,27 @@ init session =
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))
+                (constructor_qid
+                  (constructor_identifier))
                 (lower_pattern
                   (lower_case_identifier))))
             (arrow)
             (function_call_expr
               (value_expr
-                (upper_case_qid
-                  (upper_case_identifier)))
+                (constructor_qid
+                  (constructor_identifier)))
               (value_expr
                 (value_qid
                   (lower_case_identifier)))))
           (case_of_branch
             (pattern
               (union_pattern
-                (upper_case_qid
-                  (upper_case_identifier))))
+                (constructor_qid
+                  (constructor_identifier))))
             (arrow)
             (value_expr
-              (upper_case_qid
-                (upper_case_identifier))))))
+              (constructor_qid
+                (constructor_identifier))))))
       (value_declaration
         (function_declaration_left
           (lower_case_identifier))
@@ -388,8 +388,8 @@ i =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))))
+        (type_qid
+          (type_identifier)))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier))
@@ -400,8 +400,8 @@ i =
         (colon)
         (type_expression
           (type_ref
-            (upper_case_qid
-              (upper_case_identifier)))))
+            (type_qid
+              (type_identifier)))))
       (value_declaration
         (function_declaration_left
           (lower_case_identifier))
@@ -508,8 +508,8 @@ viewHorizontal =
           (lower_case_identifier))
         (eq)
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier))))
+          (constructor_qid
+            (constructor_identifier))))
       (value_declaration
         (function_declaration_left
           (lower_case_identifier)
@@ -517,8 +517,8 @@ viewHorizontal =
             (lower_case_identifier)))
         (eq)
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier))))
+          (constructor_qid
+            (constructor_identifier))))
       (value_expr
         (value_qid
           (lower_case_identifier))))))
@@ -697,8 +697,8 @@ displayEmoji =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))))
+        (type_qid
+          (type_identifier)))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier))
@@ -733,8 +733,8 @@ test =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))))
+        (type_qid
+          (type_identifier)))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier))

@@ -15,7 +15,8 @@ module.exports = grammar({
   name: "elm",
 
   conflicts: ($) => [
-    [$.upper_case_qid, $.value_qid],
+    [$.type_qid, $.value_qid],
+    [$.constructor_qid, $.value_qid],
     [$.function_call_expr],
     [$.case_of_expr],
     [$._function_call_target, $._atom],
@@ -111,11 +112,15 @@ module.exports = grammar({
     exposed_value: ($) => $.lower_case_identifier,
 
     exposed_type: ($) =>
-      seq($.upper_case_identifier, optional($.exposed_union_constructors)),
+      seq(
+        alias($._upper_case_identifier, $.type_identifier),
+        optional($.exposed_union_constructors)
+      ),
 
     exposed_union_constructors: ($) => seq("(", $.double_dot, ")"),
 
-    exposed_union_constructor: ($) => $.upper_case_identifier,
+    exposed_union_constructor: ($) =>
+      alias($._upper_case_identifier, $.constructor_identifier),
 
     exposed_operator: ($) => $._operator_as_function_inner,
 
@@ -132,7 +137,7 @@ module.exports = grammar({
     module_identifier: ($) =>
       prec.right(
         seq(
-          alias($.upper_case_identifier, $.module_name_segment),
+          alias($._upper_case_identifier, $.module_name_segment),
           repeat(
             seq(
               alias($._dot_without_leading_whitespace, $.dot),
@@ -145,12 +150,12 @@ module.exports = grammar({
         )
       ),
 
-    upper_case_qid: ($) =>
+    constructor_qid: ($) =>
       prec.right(
         choice(
-          $.upper_case_identifier,
+          alias($._upper_case_identifier, $.constructor_identifier),
           seq(
-            alias($.upper_case_identifier, $.module_name_segment),
+            alias($._upper_case_identifier, $.module_name_segment),
             alias($._dot_without_leading_whitespace, $.dot),
             repeat(
               seq(
@@ -163,7 +168,31 @@ module.exports = grammar({
             ),
             alias(
               $._upper_case_identifier_without_leading_whitespace,
-              $.upper_case_identifier
+              $.constructor_identifier
+            )
+          )
+        )
+      ),
+
+    type_qid: ($) =>
+      prec.right(
+        choice(
+          alias($._upper_case_identifier, $.type_identifier),
+          seq(
+            alias($._upper_case_identifier, $.module_name_segment),
+            alias($._dot_without_leading_whitespace, $.dot),
+            repeat(
+              seq(
+                alias(
+                  $._upper_case_identifier_without_leading_whitespace,
+                  $.module_name_segment
+                ),
+                alias($._dot_without_leading_whitespace, $.dot)
+              )
+            ),
+            alias(
+              $._upper_case_identifier_without_leading_whitespace,
+              $.type_identifier
             )
           )
         )
@@ -173,7 +202,7 @@ module.exports = grammar({
       choice(
         $.lower_case_identifier,
         seq(
-          alias($.upper_case_identifier, $.module_name_segment),
+          alias($._upper_case_identifier, $.module_name_segment),
           alias($._dot_without_leading_whitespace, $.dot),
           repeat(
             seq(
@@ -212,7 +241,7 @@ module.exports = grammar({
     as_clause: ($) =>
       seq(
         $.as,
-        field("name", alias($.upper_case_identifier, $.module_name_segment))
+        field("name", alias($._upper_case_identifier, $.module_name_segment))
       ),
 
     // TOP-LEVEL DECLARATION
@@ -256,7 +285,7 @@ module.exports = grammar({
       prec.left(
         seq(
           $.type,
-          field("name", $.upper_case_identifier),
+          field("name", alias($._upper_case_identifier, $.type_identifier)),
           field("typeName", repeat($.lower_type_name)),
           $.eq,
           field("unionVariant", $.union_variant),
@@ -269,7 +298,10 @@ module.exports = grammar({
     union_variant: ($) =>
       prec.left(
         seq(
-          field("name", $.upper_case_identifier),
+          field(
+            "name",
+            alias($._upper_case_identifier, $.constructor_identifier)
+          ),
           repeat($._single_type_expression)
         )
       ),
@@ -281,7 +313,7 @@ module.exports = grammar({
       seq(
         $.type,
         $.alias,
-        field("name", $.upper_case_identifier),
+        field("name", alias($._upper_case_identifier, $.type_identifier)),
         field("typeVariable", repeat($.lower_type_name)),
         $.eq,
         field("typeExpression", $.type_expression)
@@ -292,7 +324,7 @@ module.exports = grammar({
     _type_expression_inner: ($) =>
       choice($.type_ref, $._single_type_expression),
 
-    type_ref: ($) => seq($.upper_case_qid, repeat1($._single_type_expression)),
+    type_ref: ($) => seq($.type_qid, repeat1($._single_type_expression)),
 
     _single_type_expression: ($) =>
       choice(
@@ -303,7 +335,7 @@ module.exports = grammar({
         seq("(", field("part", $.type_expression), ")")
       ),
 
-    type_ref_without_args: ($) => $.upper_case_qid,
+    type_ref_without_args: ($) => $.type_qid,
 
     type_variable: ($) => $.lower_case_identifier,
 
@@ -517,7 +549,7 @@ module.exports = grammar({
         field("expr", $._expression)
       ),
 
-    value_expr: ($) => field("name", choice($.value_qid, $.upper_case_qid)),
+    value_expr: ($) => field("name", choice($.value_qid, $.constructor_qid)),
 
     tuple_expr: ($) =>
       seq(
@@ -661,12 +693,12 @@ module.exports = grammar({
     union_pattern: ($) =>
       prec.left(
         seq(
-          field("constructor", $.upper_case_qid),
+          field("constructor", $.constructor_qid),
           field("argPattern", repeat($._union_argument_pattern))
         )
       ),
 
-    nullary_constructor_argument_pattern: ($) => $.upper_case_qid,
+    nullary_constructor_argument_pattern: ($) => $.constructor_qid,
 
     _union_argument_pattern: ($) =>
       choice(
@@ -714,7 +746,7 @@ module.exports = grammar({
 
     // Stuff from lexer
 
-    upper_case_identifier: ($) => /\p{Lu}[_\d\p{L}]*/,
+    _upper_case_identifier: ($) => /\p{Lu}[_\d\p{L}]*/,
 
     lower_case_identifier: ($) => /\p{Ll}[_\d\p{L}]*/,
 

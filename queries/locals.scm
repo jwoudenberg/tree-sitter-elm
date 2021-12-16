@@ -12,4 +12,4 @@
 
 (value_expr(value_qid(module_name_segment)) @local.reference)
 (value_expr(value_qid(lower_case_identifier)) @local.reference)
-(type_ref (upper_case_qid) @local.reference)
+(type_ref (type_qid) @local.reference)

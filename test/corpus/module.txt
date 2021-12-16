@@ -90,7 +90,7 @@ module Main exposing (Msg(..), main, update, view)
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier)
+        (type_identifier)
         (exposed_union_constructors
           (double_dot)))
       (exposed_value
@@ -116,7 +116,7 @@ module Main exposing (Msg, main, update, view)
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (exposed_value
         (lower_case_identifier))
       (exposed_value
@@ -140,7 +140,7 @@ module Main exposing (Msg(..), main, update, view)
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier)
+        (type_identifier)
         (exposed_union_constructors
           (double_dot)))
       (exposed_value
@@ -166,9 +166,9 @@ module Main exposing (Msg(One), main, update, view)
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (ERROR
-        (upper_case_identifier))
+        (constructor_identifier))
       (exposed_value
         (lower_case_identifier))
       (exposed_value
@@ -203,12 +203,12 @@ effect module Task where { command = MyCmd } exposing
         (lower_case_identifier)
         (eq)
         (value_expr
-          (upper_case_qid
-            (upper_case_identifier)))))
+          (constructor_qid
+            (constructor_identifier)))))
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (exposed_value
         (lower_case_identifier))
       (exposed_value

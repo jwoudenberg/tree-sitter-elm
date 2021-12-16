@@ -78,7 +78,7 @@ import Html exposing (Html, button, div, text)
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (exposed_value
         (lower_case_identifier))
       (exposed_value
@@ -114,7 +114,7 @@ import Html.Attributes as Attr
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (exposed_value
         (lower_case_identifier))
       (exposed_value
@@ -131,9 +131,9 @@ import Html.Attributes as Attr
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (exposed_type
-        (upper_case_identifier))))
+        (type_identifier))))
   (import_clause
     (import)
     (module_identifier
@@ -167,7 +167,7 @@ import Remedy.ScreenList as ScreenList
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))))
+        (type_identifier))))
   (import_clause
     (import)
     (module_identifier
@@ -180,7 +180,7 @@ import Remedy.ScreenList as ScreenList
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))))
+        (type_identifier))))
   (import_clause
     (import)
     (module_identifier
@@ -214,7 +214,7 @@ import Url.Parser as Parser exposing ((</>), Parser, oneOf, s, string)
       (exposed_operator
         (operator_identifier))
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (exposed_value
         (lower_case_identifier))
       (exposed_value
@@ -238,7 +238,7 @@ import Element exposing (DeviceClass(..))
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier)
+        (type_identifier)
         (exposed_union_constructors
           (double_dot))))))
 
@@ -258,6 +258,6 @@ import Element exposing (DeviceClass(Phone))
     (exposing_list
       (exposing)
       (exposed_type
-        (upper_case_identifier))
+        (type_identifier))
       (ERROR
-        (upper_case_identifier)))))
+        (constructor_identifier)))))

@@ -19,17 +19,17 @@ main =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))
+        (type_qid
+          (type_identifier))
         (type_ref
-          (upper_case_qid
-            (upper_case_identifier)))
+          (type_qid
+            (type_identifier)))
         (type_ref
-          (upper_case_qid
-            (upper_case_identifier)))
+          (type_qid
+            (type_identifier)))
         (type_ref
-          (upper_case_qid
-            (upper_case_identifier))))))
+          (type_qid
+            (type_identifier))))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier))
@@ -56,14 +56,14 @@ main =
           (lower_case_identifier)
           (eq)
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (field
           (lower_case_identifier)
           (eq)
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier))))
+            (constructor_qid
+              (constructor_identifier))))
         (field
           (lower_case_identifier)
           (eq)
@@ -98,34 +98,34 @@ init maybeViewer url navKey =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier))
+        (type_qid
+          (type_identifier))
         (type_ref
-          (upper_case_qid
-            (upper_case_identifier))))
+          (type_qid
+            (type_identifier))))
       (arrow)
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))
+        (type_qid
+          (type_identifier)))
       (arrow)
       (type_ref
-        (upper_case_qid
+        (type_qid
           (module_name_segment)
           (dot)
-          (upper_case_identifier)))
+          (type_identifier)))
       (arrow)
       (tuple_type
         (type_expression
           (type_ref
-            (upper_case_qid
-              (upper_case_identifier))))
+            (type_qid
+              (type_identifier))))
         (type_expression
           (type_ref
-            (upper_case_qid
-              (upper_case_identifier))
+            (type_qid
+              (type_identifier))
             (type_ref
-              (upper_case_qid
-                (upper_case_identifier))))))))
+              (type_qid
+                (type_identifier))))))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier)
@@ -153,8 +153,8 @@ init maybeViewer url navKey =
       (parenthesized_expr
         (function_call_expr
           (value_expr
-            (upper_case_qid
-              (upper_case_identifier)))
+            (constructor_qid
+              (constructor_identifier)))
           (parenthesized_expr
             (function_call_expr
               (value_expr
@@ -183,8 +183,8 @@ test =
     (colon)
     (type_expression
       (type_ref
-        (upper_case_qid
-          (upper_case_identifier)))))
+        (type_qid
+          (type_identifier)))))
   (value_declaration
     (function_declaration_left
       (lower_case_identifier))
