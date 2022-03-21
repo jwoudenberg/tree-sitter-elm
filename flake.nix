@@ -9,6 +9,8 @@
       in {
         devShell = pkgs.mkShell {
           buildInputs = [
+            pkgs.clang-tools
+            pkgs.flawfinder
             pkgs.tree-sitter
             pkgs.nodejs
             pkgs.python
