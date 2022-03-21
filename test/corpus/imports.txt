@@ -260,4 +260,4 @@ import Element exposing (DeviceClass(Phone))
       (exposed_type
         (type_identifier))
       (ERROR
-        (constructor_identifier)))))
+        (type_identifier)))))

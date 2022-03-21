@@ -168,7 +168,7 @@ module Main exposing (Msg(One), main, update, view)
       (exposed_type
         (type_identifier))
       (ERROR
-        (constructor_identifier))
+        (type_identifier))
       (exposed_value
         (lower_case_identifier))
       (exposed_value
